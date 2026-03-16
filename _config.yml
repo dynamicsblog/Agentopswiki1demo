@@ -1,0 +1,7 @@
+title: Business Central Agent Playground Wiki
+description: A lightweight GitHub Pages wiki for Microsoft Dynamics 365 Business Central Agent Playground content.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
