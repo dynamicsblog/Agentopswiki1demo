@@ -1,18 +1,39 @@
 # Business Central Agent Playground Wiki
 
-This repository contains a multi-page Markdown wiki designed for **GitHub Pages**.
+This repository contains a multi-page Markdown wiki for **GitHub Pages**.
 
-## Local structure
+## Project pages
 
-- `index.md` - home page
-- `overview.md` - what the Agent Playground is and why to use it
-- `toolkit-components.md` - toolkit building blocks and architecture
-- `setup.md` - setup and quickstart guidance
-- `playground-scenarios.md` - practical scenarios and implementation patterns
-- `references.md` - source links and next steps
-- `_config.yml` - Jekyll/GitHub Pages configuration
-- `.github/workflows/deploy-pages.yml` - GitHub Actions deployment workflow
+- `index.md` - home page and global navigation
+- `overview.md` - scope and purpose
+- `toolkit-components.md` - architecture and building blocks
+- `setup.md` - prerequisites and quickstart
+- `playground-scenarios.md` - practical scenario ideas
+- `references.md` - source links and maintenance notes
 
-## Publishing
+## GitHub Pages setup (one-time)
 
-The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the site to GitHub Pages on pushes to `main`.
+1. Create a GitHub repository.
+2. Add the remote:
+   ```bash
+   git remote add origin https://github.com/<USER>/<REPO>.git
+   ```
+3. Push the branch:
+   ```bash
+   git push -u origin main
+   ```
+4. In GitHub: **Settings → Pages → Build and deployment → Source = GitHub Actions**.
+5. The workflow `.github/workflows/deploy-pages.yml` will publish the site automatically.
+
+## Local checks
+
+Run a fast local link check before pushing:
+
+```bash
+python scripts/check_links.py
+```
+
+## Notes
+
+- This repository is already prepared for Actions-based GitHub Pages deployment.
+- Actual publication requires a configured GitHub remote and push permissions.
